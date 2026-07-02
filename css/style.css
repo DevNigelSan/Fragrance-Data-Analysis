@@ -55,3 +55,58 @@ body {
   border-top: 1px solid var(--color-border);
   margin-top: 3rem;
 }
+
+#search-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+#note-form label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+#note-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#note-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: #fff;
+  color: var(--color-text);
+}
+
+#note-input:focus {
+  outline: none;
+  border-color: var(--color-amber);
+}
+
+#note-form button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: var(--color-amber);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#note-form button:hover {
+  background-color: var(--color-amber-dark);
+}
+
+.hint {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
