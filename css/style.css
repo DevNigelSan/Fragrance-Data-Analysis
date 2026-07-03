@@ -176,3 +176,68 @@ body {
 .fragrance-card .notes strong {
   color: var(--color-text);
 }
+
+/* ===== Animations & Polish ===== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.site-header {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+#search-section {
+  animation: fadeInUp 0.6s ease-out 0.15s both;
+}
+
+#note-input {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#note-input:focus {
+  box-shadow: 0 0 0 3px rgba(200, 137, 58, 0.15);
+}
+
+#note-form button {
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#note-form button:active {
+  transform: scale(0.97);
+}
+
+.fragrance-card {
+  animation: fadeInUp 0.4s ease-out both;
+}
+
+.fragrance-card:nth-child(1) { animation-delay: 0.05s; }
+.fragrance-card:nth-child(2) { animation-delay: 0.1s; }
+.fragrance-card:nth-child(3) { animation-delay: 0.15s; }
+.fragrance-card:nth-child(4) { animation-delay: 0.2s; }
+.fragrance-card:nth-child(5) { animation-delay: 0.25s; }
+.fragrance-card:nth-child(6) { animation-delay: 0.3s; }
+
+.fragrance-card {
+  transform: translateY(0);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.fragrance-card:hover {
+  transform: translateY(-3px);
+}
+
+.site-header h1 {
+  transition: letter-spacing 0.3s ease;
+}
+
+.site-header:hover h1 {
+  letter-spacing: 0.04em;
+}
