@@ -241,3 +241,33 @@ body {
 .site-header:hover h1 {
   letter-spacing: 0.04em;
 }
+
+.fragrance-card {
+  position: relative;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: color 0.2s ease, transform 0.15s ease, background-color 0.2s ease;
+}
+
+.favorite-btn:hover {
+  color: var(--color-amber);
+  background-color: var(--color-amber-light);
+  transform: scale(1.1);
+}
+
+.favorite-btn.active {
+  color: var(--color-amber-dark);
+}
