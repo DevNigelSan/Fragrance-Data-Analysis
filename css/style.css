@@ -280,3 +280,41 @@ body {
   margin-top: 1.5rem;
   animation: fadeInUp 0.6s ease-out 0.05s both;
 }
+
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.pill {
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  background-color: #fff;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.pill:hover {
+  border-color: var(--color-amber);
+  color: var(--color-amber-dark);
+}
+
+.pill.active {
+  background-color: var(--color-amber);
+  color: #fff;
+  border-color: var(--color-amber);
+}
+
+.pill-divider {
+  width: 1px;
+  height: 20px;
+  background-color: var(--color-border);
+  margin: 0 0.25rem;
+}
