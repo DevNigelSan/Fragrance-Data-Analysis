@@ -42,7 +42,37 @@ function initMagneticButton() {
   });
 }
 
+// Soft glow that follows the cursor
+function initCursorGlow() {
+  const glow = document.getElementById('cursor-glow');
+  if (!glow) return;
+
+  let currentX = 0, currentY = 0;
+  let targetX = 0, targetY = 0;
+
+  document.addEventListener('mousemove', (e) => {
+    targetX = e.clientX;
+    targetY = e.clientY;
+    glow.classList.add('active');
+  });
+
+  document.addEventListener('mouseleave', () => {
+    glow.classList.remove('active');
+  });
+
+  function animateGlow() {
+    currentX += (targetX - currentX) * 0.1;
+    currentY += (targetY - currentY) * 0.1;
+    glow.style.left = `${currentX}px`;
+    glow.style.top = `${currentY}px`;
+    requestAnimationFrame(animateGlow);
+  }
+
+  animateGlow();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initCardTilt();
   initMagneticButton();
+  initCursorGlow();
 });
